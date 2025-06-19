@@ -1,0 +1,14 @@
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\bin\Debug\net6.0\Proekt2.exe
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\bin\Debug\net6.0\Proekt2.deps.json
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\bin\Debug\net6.0\Proekt2.runtimeconfig.json
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\bin\Debug\net6.0\Proekt2.dll
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\bin\Debug\net6.0\Proekt2.pdb
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\Proekt2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\Proekt2.AssemblyInfoInputs.cache
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\Proekt2.AssemblyInfo.cs
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\Proekt2.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\Proekt2.dll
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\refint\Proekt2.dll
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\Proekt2.pdb
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\Proekt2.genruntimeconfig.cache
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\ref\Proekt2.dll
