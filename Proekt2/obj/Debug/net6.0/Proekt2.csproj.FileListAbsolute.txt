@@ -12,3 +12,4 @@ C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\re
 C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\Proekt2.pdb
 C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\Proekt2.genruntimeconfig.cache
 C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\ref\Proekt2.dll
+C:\Users\Admin\OneDrive\Desktop\programirane\Proekt2\Proekt2\obj\Debug\net6.0\Proekt2.sourcelink.json

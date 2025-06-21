@@ -49,28 +49,67 @@ namespace Proekt2
                 Buyer buyer = new Buyer(nomer, ime, familiq, rajdane, budget);
                 buyers.Add(buyer);
             }
-            Console.Write("Ще правиш ли справки на коли? (Y/N) = ");
+            Console.Write("Ще правиш ли справки на коли? (YES/NO) = ");
             string answer = Console.ReadLine().ToUpper();
-            while (answer == "Y")
+            while (answer == "YES")
             {
-                Console.Write("Въведи марката или модела на която искаш справка = ");
+                Console.Write("Въведи марката или модела на която искаш справка, ако искаш да спреш напиши NO = ");
                 string search = Console.ReadLine();
-                if (search == "N")
+                if (search == "NO")
                 {
-                    answer = "N";
+                    answer = "NO";
                 }
                 else
                 {
                     SearchAvto(avto1, search);
                 }
             }
-            //Console.WriteLine("Искаш да изтриваш или да актуализираш информацията за автомобили (AC/DEL) = ");
-            //string action = Console.ReadLine().ToUpper();
-            Console.Write("Искаш ли да изтриеш иформацията за афтомобили? (YES/NO) = ");
+            Console.WriteLine("------------------------------");
+            Console.Write("Искаш да иправиш промяна върxy информацията за автомобилите? (YES/NO) = ");
+            string action = Console.ReadLine().ToUpper();
+            while (action == "YES")
+            {
+
+                Console.WriteLine("Искаш ли да изтриваш или да актуализираш информацията за автомобили (AC/DEL), ако искаш да спреш напиши NO = ");
+                string dei = Console.ReadLine().ToUpper();
+                if (dei == "NO")
+                {
+                    action = "NO";
+                    break;
+                }
+                else if (dei == "AC")
+                {
+                    Console.Write("Въведи модела на автомобила който искаш да актуализираш = ");
+                    string search = Console.ReadLine();
+                    for (int i = 0; i < avto1.Count; i++)
+                    {
+                        if (avto1[i].Model == search)
+                        {
+                            Console.WriteLine("Въведи новите данни за автомобила: рег.номер, номер на двигателя, марка, модел, година и цена");
+                            string[] input3 = Console.ReadLine().Split(' ');
+                            avto1[i].Regnomer = input3[0];
+                            avto1[i].Enginumber = input3[1];
+                            avto1[i].Marka = input3[2];
+                            avto1[i].Model = input3[3];
+                            avto1[i].Godina = int.Parse(input3[4]);
+                            avto1[i].Cena = double.Parse(input3[5]);
+                            Console.WriteLine($"Автомобилът {search} е актуализиран.");
+                        }
+                    }
+                }
+                else if (dei == "DEL")
+                {
+                    Console.Write("Въведи модела на автомобила който искаш да изтриеш = ");
+                    string search = Console.ReadLine();
+                    DeleteAvto(avto1, search);
+                }
+            }
+            Console.WriteLine("------------------------------");
+            Console.Write("Искаш ли да изтриеш иформацията за автомобили? (YES/NO) = ");
             string action1 = Console.ReadLine().ToUpper();
             while (action1 == "YES")
             {
-                Console.Write("Въведи марката на автомобила който искаш да изтриеш = ");
+                Console.Write("Въведи марката на автомобила който искаш да изтриеш, ако искаш да спреш напиши NO = ");
                 string search = Console.ReadLine();
                 if (search == "NO")
                 {
@@ -112,14 +151,14 @@ namespace Proekt2
         {
             for (int i = 0; i < avto1.Count; i++)
             {
-                if (avto1[i].Marka == search || avto1[i].Model == search)
+                if (avto1[i].Model == search)
                 {
                     avto1.RemoveAt(i);
-                    Console.WriteLine($"Автомобилът с марка {search} е изтрит.");
+                    Console.WriteLine($"Автомобилът с модел {search} е изтрит.");
                     return;
                 }
             }
-            Console.WriteLine($"Автомобилът с марка {search} не е намерен.");
+            Console.WriteLine($"Автомобилът с модел {search} не е намерен.");
         }
         static public void Avgcars(List<Avto> avto1)
         {
@@ -173,7 +212,23 @@ namespace Proekt2
                 }
                 
             }
-            pocena.Sort((a, b) => a.Cena.CompareTo(b.Cena));
+            for (int i = 0; i < pocena.Count - 1; i++)
+            {
+                int minIndex = i;
+                for (int j = i + 1; j < pocena.Count; j++)
+                {
+                    if (pocena[j].Cena < pocena[minIndex].Cena)
+                    {
+                        minIndex = j;
+                    }
+                }
+                if (minIndex != i)
+                {
+                    Avto temp = pocena[i];
+                    pocena[i] = pocena[minIndex];
+                    pocena[minIndex] = temp;
+                }
+            }
         }
     }
 }
